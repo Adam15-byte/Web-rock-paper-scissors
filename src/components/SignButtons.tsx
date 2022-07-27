@@ -10,10 +10,11 @@ interface Props {
   type: "paper" | "rock" | "scissors";
   onClick?: (arg: Choice) => void;
   pressable: boolean;
+  winning: boolean;
 }
 
 const SignButtons = (props: Props) => {
-  const { type, onClick, pressable } = props;
+  const { type, onClick, pressable, winning } = props;
   const paper: Choice = "paper";
   const rock: Choice = "rock";
   const scissors: Choice = "scissors";
@@ -21,7 +22,7 @@ const SignButtons = (props: Props) => {
   if (type === "paper") {
     return (
       <div
-        className={pressable ? "paper-border pressable" : "paper-border"}
+        className={pressable ? "paper-border pressable-paper" : "paper-border"}
         onClick={() => {
           if (onClick) {
             onClick(paper);
@@ -30,6 +31,7 @@ const SignButtons = (props: Props) => {
       >
         <div className="icon-white-bg">
           <img src={Paper} alt="Paper" className="paper icon-img" />
+          {winning && <div className="winning-aura" />}
         </div>
       </div>
     );
@@ -37,7 +39,7 @@ const SignButtons = (props: Props) => {
   if (type === "rock") {
     return (
       <div
-        className={pressable ? "rock-border pressable" : "rock-border"}
+        className={pressable ? "rock-border pressable-rock" : "rock-border"}
         onClick={() => {
           if (onClick) {
             onClick(rock);
@@ -46,13 +48,16 @@ const SignButtons = (props: Props) => {
       >
         <div className="icon-white-bg">
           <img src={Rock} alt="Rock" className="rock icon-img" />
+          {winning && <div className="winning-aura" />}
         </div>
       </div>
     );
   }
   return (
     <div
-      className={pressable ? "scissors-border pressable" : "scissors-border"}
+      className={
+        pressable ? "scissors-border pressable-scissors" : "scissors-border"
+      }
       onClick={() => {
         if (onClick) {
           onClick(scissors);
@@ -61,6 +66,7 @@ const SignButtons = (props: Props) => {
     >
       <div className="icon-white-bg">
         <img src={Scissors} alt="Scissors" className="scissors icon-img" />
+        {winning && <div className="winning-aura" />}
       </div>
     </div>
   );
