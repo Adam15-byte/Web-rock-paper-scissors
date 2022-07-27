@@ -6,6 +6,7 @@ import Paper from "./assets/icon-paper.svg";
 import Rock from "./assets/icon-rock.svg";
 import Scissors from "./assets/icon-scissors.svg";
 import SignButtons from "./components/SignButtons";
+import RulesModal from "./components/rulesModal/RulesModal";
 
 type Choice = "paper" | "rock" | "scissors";
 type Outcome = "user" | "house" | "draw";
@@ -169,6 +170,8 @@ function App() {
           )}
         </div>
       </div>
+
+      <button className="rules">Rules</button>
     </div>
   );
 }

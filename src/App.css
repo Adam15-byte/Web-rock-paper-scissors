@@ -177,3 +177,19 @@
   border-radius: 10px;
   box-shadow: 2px 2px 0.3rem #000;
 }
+
+.rules {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
