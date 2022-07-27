@@ -19,6 +19,8 @@
        display: flex;
        align-items: center;
        justify-content: center;
+       height: 200px;
+       width: 200px;
        padding: 20px;
        border-radius: 50%;
      }
@@ -26,39 +28,40 @@
      .scissors-border {
        background: var(--scissors-gradient);
        box-shadow: 0 10px 0 #c76c1a;
-       cursor: pointer;
      }
      
      .rock-border {
        background: var(--rock-gradient);
        box-shadow: 0 10px 0 #a01533;
-       cursor: pointer;
      }
      
      .paper-border {
        background: var(--paper-gradient);
        box-shadow: 0 10px 0 #2944c3;
+     }
+
+     .pressable {
        cursor: pointer;
      }
      
-     .paper-border:active {
+     .pressable:active>.paper-border {
        box-shadow: 0 3px 0 #2944c3;
        cursor: pointer;
        transform: translateY(7px);
      }
      
-     .rock-border:active {
+     .pressable:active>.rock-border {
        box-shadow: 0 3px 0 #a01533;
        cursor: pointer;
        transform: translateY(7px);
      }
      
-     .scissors-border:active {
+     .pressable:active>.scissors-border {
        box-shadow: 0 3px 0 #c76c1a;
        cursor: pointer;
        transform: translateY(7px);
      }
      
-     .rock-border:active>.icon-white-bg, .scissors-border:active>.icon-white-bg, .paper-border:active>.icon-white-bg {
+     .pressable:active>.icon-white-bg, .pressable:active>.icon-white-bg, .pressable:active>.icon-white-bg {
        box-shadow: inset 0 3px 0 #b9bdd1;
      }
