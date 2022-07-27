@@ -5,6 +5,7 @@ import Triangle from "./assets/bg-triangle.svg";
 import Paper from "./assets/icon-paper.svg";
 import Rock from "./assets/icon-rock.svg";
 import Scissors from "./assets/icon-scissors.svg";
+import SignButtons from "./components/SignButtons";
 
 function App() {
   return (
@@ -19,23 +20,11 @@ function App() {
         </div>
         <div className="buttons-container">
           <div className="upper-row">
-            <div className="paper-border">
-              <div className="icon-white-bg">
-                <img src={Paper} alt="Paper" className="paper" />
-              </div>
-            </div>
-            <div className="scissors-border">
-              <div className="icon-white-bg">
-                <img src={Scissors} alt="Scissors" className="scissors" />
-              </div>
-            </div>
+            <SignButtons type="paper" />
+            <SignButtons type="scissors" />
           </div>
           <div className="lower-row">
-            <div className="rock-border">
-              <div className="icon-white-bg">
-                <img src={Rock} alt="Rock" className="rock" />
-              </div>
-            </div>
+            <SignButtons type="rock" />
           </div>
           <img id="triangle" src={Triangle} alt="" />
         </div>
