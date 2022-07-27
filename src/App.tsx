@@ -18,9 +18,26 @@ function App() {
           </div>
         </div>
         <div className="buttons-container">
-          <div className="upper-row"></div>
-          <div className="lower-row"></div>
-          <div className="triangle"></div>
+          <div className="upper-row">
+            <div className="paper-border">
+              <div className="icon-white-bg">
+                <img src={Paper} alt="Paper" className="paper" />
+              </div>
+            </div>
+            <div className="scissors-border">
+              <div className="icon-white-bg">
+                <img src={Scissors} alt="Scissors" className="scissors" />
+              </div>
+            </div>
+          </div>
+          <div className="lower-row">
+            <div className="rock-border">
+              <div className="icon-white-bg">
+                <img src={Rock} alt="Rock" className="rock" />
+              </div>
+            </div>
+          </div>
+          <img id="triangle" src={Triangle} alt="" />
         </div>
       </div>
     </div>

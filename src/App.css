@@ -9,16 +9,17 @@
   height: 100vh;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 auto;
 }
 
 
 .logo-score-container {
+  margin-top: 60px;
   width: 80%;
   height: 200px;
-  position: absolute;
   background-color: transparent;
   border: 3px solid var(--header-outline);
   top: 8%;
@@ -54,4 +55,105 @@
   font-weight: 700;
   font-size: 60px;
   font-family: sans-serif;
+}
+
+.buttons-container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  height: 400px;
+}
+
+.upper-row {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: flex-start;
+  z-index: 10;
+  padding: 20px 0;
+}
+
+.lower-row {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#triangle {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80%;
+  z-index: 1;
+}
+
+.upper-row img, .lower-row img {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+}
+
+.icon-white-bg {
+  height: 160px;
+  width: 160px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: inset 0 10px 0 #b9bdd1;
+}
+
+.scissors-border, .rock-border, .paper-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.scissors-border {
+  background: var(--scissors-gradient);
+  box-shadow: 0 10px 0 #c76c1a;
+  cursor: pointer;
+}
+
+.rock-border {
+  background: var(--rock-gradient);
+  box-shadow: 0 10px 0 #a01533;
+  cursor: pointer;
+}
+
+.paper-border {
+  background: var(--paper-gradient);
+  box-shadow: 0 10px 0 #2944c3;
+  cursor: pointer;
+}
+
+.paper-border:active {
+  box-shadow: 0 3px 0 #2944c3;
+  cursor: pointer;
+  transform: translateY(7px);
+}
+
+.rock-border:active {
+  box-shadow: 0 3px 0 #a01533;
+  cursor: pointer;
+  transform: translateY(7px);
+}
+
+.scissors-border:active {
+  box-shadow: 0 3px 0 #c76c1a;
+  cursor: pointer;
+  transform: translateY(7px);
+}
+
+.rock-border:active>.icon-white-bg, .scissors-border:active>.icon-white-bg, .paper-border:active>.icon-white-bg {
+  box-shadow: inset 0 3px 0 #b9bdd1;
 }
