@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Logo from "./assets/logo.svg";
 import Triangle from "./assets/bg-triangle.svg";
-import Paper from "./assets/icon-paper.svg";
-import Rock from "./assets/icon-rock.svg";
-import Scissors from "./assets/icon-scissors.svg";
 import SignButtons from "./components/SignButtons";
-import RulesModal from "./components/rulesModal/RulesModal";
 
 type Choice = "paper" | "rock" | "scissors";
 type Outcome = "user" | "house" | "draw";
@@ -75,6 +71,9 @@ function App() {
     setOutcome(null);
   };
 
+  ////
+  // When the user makes a choice, the counter is set to 3, and the counter is mounted
+  ////
   useEffect(() => {
     if (!counter) {
       determineOutcome();
@@ -89,6 +88,8 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        {/* Header with the score */}
+
         <div className="logo-score-container">
           <img className="logo" src={Logo} alt="logo" />
           <div className="score-container">
@@ -96,8 +97,15 @@ function App() {
             <span className="score-number">{score}</span>
           </div>
         </div>
+
+        {/* The container with buttons and score */}
+
         <div className="buttons-container">
           {userChoice ? (
+            ////
+            // The screen showing the results and house choice.
+            // AKA. The second screen.
+            ////
             <div className="compare-container">
               <div className="left-compare">
                 <div className="centering-div">
@@ -142,6 +150,9 @@ function App() {
               </div>
             </div>
           ) : (
+            ////
+            // First screen for taking the user choice.
+            ////
             <>
               <div className="upper-row">
                 <SignButtons
@@ -170,7 +181,6 @@ function App() {
           )}
         </div>
       </div>
-
       <button className="rules">Rules</button>
     </div>
   );
