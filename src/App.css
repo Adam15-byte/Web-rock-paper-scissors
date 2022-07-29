@@ -6,7 +6,6 @@
 
 .container {
   max-width: 1366px;
-  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -192,4 +191,68 @@
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+  }
+  .container {
+    max-width: 375px;
+    padding: 0 30px;
+  }
+  .logo-score-container {
+    margin-top: 20px;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+  }
+  .logo {
+    height: 100%;
+    padding: 15px;
+  }
+  .score-container {
+    width: 35%;
+    box-shadow: 1px 1px 0.3rem #000;
+  }
+  .score-text {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  .score-number {
+    font-size: 45px;
+  }
+  .buttons-container {
+    margin-top: 40px;
+    transform: scale(0.6);
+  }
+  .right-compare, .left-compare {
+    padding: 0 30px;
+  }
+  .compare-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .middle-ground {
+    flex: 1 1;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+  .rules {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 70px;
+    border: 1px solid #fff;
+    padding: 8px 40px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .new-game-btn {
+    font-size: 24px;
+  }
 }

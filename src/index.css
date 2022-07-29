@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 :root{
   --dark-text: hsl(229, 25%, 31%);
   --score-text: hsl(229, 64%, 46%);
